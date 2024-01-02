@@ -16,11 +16,11 @@ from xgboost import XGBRegressor
 def find_best_model_with_params(X_train, y_train, X_test, y_test):
 
     hyperparameters = {
-        "RandomForestRegressor": {
-            "n_estimators": hp.choice("n_estimators", [10, 15, 20]),
-            "max_depth": hp.choice("max_depth", [6, 8, 10]),
-            "max_features": hp.choice("max_features", ["sqrt", "log2", None]),
-        },
+        # "RandomForestRegressor": {
+        #     "n_estimators": hp.choice("n_estimators", [10, 15, 20]),
+        #     "max_depth": hp.choice("max_depth", [6, 8, 10]),
+        #     "max_features": hp.choice("max_features", ["sqrt", "log2", None]),
+        # },
         "XGBRegressor": {
             "n_estimators": hp.choice("n_estimators", [10, 15, 20]),
             "max_depth": hp.choice("max_depth", [6, 8, 10]),
@@ -99,3 +99,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("training done")
